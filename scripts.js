@@ -10,7 +10,10 @@
 // }
 // console.log(nomDeMaFonction(On remplace le paramètre par ce qu'on désire)) // 
 
-// CODE ICI
+function multiply(a, b){
+    return a * b;
+}
+console.log (multiply(2,6))
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 2
@@ -21,7 +24,14 @@
 // const monTableau = [1, 2, 3]
 // console.log(monTableau[0]) // 1
 
-// CODE ICI
+const valeurTabex2 = [1, 2, 3];
+
+function tabex2(valeurTabex2) {
+    return [0]
+}
+
+const premierElement = tabex2(valeurTabex2)
+console.log(premierElement)
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 3
@@ -33,7 +43,15 @@
 // monTableau.pop()
 // console.log(monTableau) // [1, 2]
 
-// CODE ICI
+const valeurTabex3 = [1, 2, 3];
+
+function tabex3 (valeurTabex3) {
+   valeurTabex3.pop();
+    return valeurTabex3;
+}
+
+const popTab = tabex3(valeurTabex3);
+console.log(popTab)
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -46,8 +64,16 @@
 //   console.log(monTableau[i]) // 1, 2, 3
 // }
 
-// CODE ICI
+const valeurTabex4 = [1, 2, 3];
 
+function tabex4(valeurTabex4) {
+let sumex4 =0
+    for (let i = 0; i < valeurTabex4.length; i++) {
+    sumex4 += valeurTabex4 [i];
+}
+return sumex4
+}
+console.log(tabex4(valeurTabex4))
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 5
@@ -61,7 +87,13 @@
 // console.log(monTableauInverse) // ["o", "l", "l", "e", "H"]
 //Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
 
-// CODE ICI
+function tabex5 (valeurTabex5) {
+return valeurTabex5.split("").reverse().join("")
+}
+
+valeurTabex5 = "Hello"
+
+console.log(tabex5(valeurTabex5))
 
 //----------------------------------------------------------------------------------------------//
 
@@ -72,8 +104,13 @@
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
 
-// CODE ICI
+function tabex6 (valeurTabex6) {
+return Math.max(...valeurTabex6)
+}
 
+valeurTabex6 = [1, 2, 3];
+
+console.log(tabex6(valeurTabex6))
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 7
@@ -83,7 +120,13 @@
 // const monTableau = [1, 2, 3]
 // console.log(Math.min(...monTableau)) // 1
 
-// CODE ICI
+function tabex7 (valeurTabex7) {
+    return Math.min(...valeurTabex7)
+    }
+    
+    valeurTabex7 = [1, 2, 3];
+    
+    console.log(tabex7(valeurTabex7))
 
 //----------------------------------------------------------------------------------------------//
 
@@ -99,7 +142,15 @@
 //   return element !== "e" && element !== "o"
 // })
 
-// CODE ICI
+function tablex8 (valeurTabex8) {
+return valeurTabex8.split("").filter((element) => {
+    return element !== "e" && element !== "o"
+}).join("")
+}
+
+valeurTabex8 = "Hello"
+
+console.log(tablex8(valeurTabex8))
 
 //----------------------------------------------------------------------------------------------//
 
@@ -111,8 +162,13 @@
 // const monTableau = [1, 3, 2]
 // console.log(monTableau.sort()) // [1, 2, 3]
 
-// CODE ICI
+function tablex9 (valeurTablex9) {
+    return valeurTablex9.sort()
+}
 
+valeurTablex9 = [1, 3, 2]
+
+console.log(tablex9(valeurTablex9))
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 10
