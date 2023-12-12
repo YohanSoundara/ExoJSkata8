@@ -184,7 +184,17 @@ console.log(tablex9(valeurTablex9))
 // }
 // console.log(monTableau) // ["Hello", "elloH", "lloHe", "loHel", "oHell"]
 
-// CODE ICI
+function tablex10 (maString) {
+    const monTableau = [];
+    for (let i= 0; i < maString.length; i++) {
+        const maStringRotate = maString.substring(i) + maString.substring(0,i);
+        monTableau.push(maStringRotate);
+    }
+    return monTableau;
+}
+
+const maString = "Hello";
+console.log(tablex10(maString));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -198,7 +208,13 @@ console.log(tablex9(valeurTablex9))
 //   return element + 1
 // })
 
-// CODE ICI
+const valeurTabex11 = [1, 2, 3];
+
+const tabex11 = valeurTabex11.map(function(number)  {
+    return number + 1;
+});
+
+console.log(tabex11);
 
 //----------------------------------------------------------------------------------------------//
 
