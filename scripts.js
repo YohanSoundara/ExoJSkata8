@@ -210,11 +210,14 @@ console.log(tablex10(maString));
 
 const valeurTabex11 = [1, 2, 3];
 
-const tabex11 = valeurTabex11.map(function(number)  {
+function tabex11 (valeurTabex11) {
+    const tabAddition11 = valeurTabex11.map(function(number) {
     return number + 1;
 });
+return tabAddition11
+}
 
-console.log(tabex11);
+console.log(tabex11(valeurTabex11));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -228,8 +231,16 @@ console.log(tabex11);
 //   return element.length
 // })
 
-// CODE ICI
+const valeurTabex12 = ["Hello", "World"];
 
+function tabex12 (valeurTabex12) {
+    const tabLength12 = valeurTabex12.map(function (element) {
+        return element.length
+    });
+    return tabLength12
+}
+
+console.log(tabex12(valeurTabex12))
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 13
@@ -243,7 +254,15 @@ console.log(tabex11);
 //   return element.charAt(0)
 // })
 
-// CODE ICI
+const valeurTabex13 = ["Hello", "World"];
+
+function tabex13 (valeurTabex13) {
+    const tabFirst13 = valeurTabex13.map(function(element) {
+        return element.charAt(0)
+    });
+    return tabFirst13
+}
+console.log(tabex13(valeurTabex13))
 
 //----------------------------------------------------------------------------------------------//
 
@@ -254,7 +273,15 @@ console.log(tabex11);
 // Indice regarde l'exercice 13, c'est exactement la même chose sauf qu'il faut récupérer la dernière lettre et non la première.
 
 
-// CODE ICI
+const valeurTabex14 = ["Hello", "World"];
+
+function tabex14 (valeurTabex14) {
+    const tabLast14 = valeurTabex14.map(function(element) {
+        return element.charAt(element.length-1)
+    });
+    return tabLast14
+}
+console.log(tabex14(valeurTabex14))
 
 //----------------------------------------------------------------------------------------------//
 
@@ -264,7 +291,16 @@ console.log(tabex11);
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la longueur de la string. Incice : la méthode length() permet de récupérer la longueur d'une string.
 
-// CODE ICI
+const valeurTabex15 = ["Hello", "World","Test", "Salut", "Yo"];
+
+function tabex15 (valeurTabex15) {
+    return valeurTabex15.filter(function(element) {
+        return element.length >= 5 ;
+    });
+}
+
+console.log(tabex15(valeurTabex15))
+
 
 //----------------------------------------------------------------------------------------------//
 
