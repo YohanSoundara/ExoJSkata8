@@ -314,7 +314,16 @@ console.log(tabex15(valeurTabex15))
 //   return accumulateur + element
 // }, 0)
 
-// CODE ICI
+const valeurTabex16 = [1,2,3];
+
+function tabex16 (valeurTabex16) {
+    return valeurTabex16.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0,
+    );
+};
+
+console.log(tabex16(valeurTabex16))
 
 //----------------------------------------------------------------------------------------------//
 
@@ -328,7 +337,14 @@ console.log(tabex15(valeurTabex15))
 // const monTableauConcat = monTableau1.concat(monTableau2)
 // console.log(monTableauConcat) // ["Hello", "World", "Test", "Salut"]
 
-// CODE ICI
+const valeurTabex17a = ["Hello", "World"];
+const valeurTabex17b = ["Test", "Salut"];
+
+function tabex17 () {
+    return valeurTabex17a.concat(valeurTabex17b)
+};
+
+console.log(tabex17());
 
 //----------------------------------------------------------------------------------------------//
 
@@ -338,7 +354,13 @@ console.log(tabex15(valeurTabex15))
 // Exemple : ["Poulet", "Chat", "Chien", "Cheval"] => ["Poulet", "Chien", "Cheval"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la présence de la lettre "e". Indice : la méthode includes() permet de savoir si une string contient une lettre ou un mot.
 
-// CODE ICI
+const valeurTabex18 = ["Poulet", "Chat", "Chien", "Cheval"];
+
+function tabex18 () {
+    return valeurTabex18.filter((string) => string.includes('e'));
+};
+
+console.log(tabex18())
 
 //----------------------------------------------------------------------------------------------//
 
@@ -348,7 +370,15 @@ console.log(tabex15(valeurTabex15))
 // Exemple : [ 2, 9, 6, 5, 6] => [2, 6, 6]
 // Indice : il y a plusieurs façon de faire, soit avec un for, soit avec la méthode filter() une fois ça fait utilise la méthode sort() qui permet de trier un tableau.
 
-// CODE ICI
+const valeurTabex19 = [ 2, 9, 6, 5, 6];
+
+function tabex19 () {
+    const v19Croissant = valeurTabex19.filter((number) => number % 2 === 0);
+    const v19Sort = v19Croissant.sort((a,b) => a - b );  
+    return v19Sort;
+};
+
+console.log(tabex19());
 
 //----------------------------------------------------------------------------------------------//
 
@@ -376,8 +406,15 @@ console.log(tabex15(valeurTabex15))
 // })
 // Indice 6 : Pour récupérer le premier élément d'un tableau tu peux utiliser la notation crochet : monTableau[0]
 
+const valeurTabex20a = "Prachett is the best author in the world"
+const valeurTabex20b = "The quick brown fox jumps over the lazy dog"
 
+function tabex20 (x) {
+    const stringToTab20 = x.split(" ").map((word) => {return word.length}).sort((a,b) => {return a - b});
+    return stringToTab20[0]
+}
 
+console.log(tabex20(valeurTabex20b))
 
 
 // CODE ICI
