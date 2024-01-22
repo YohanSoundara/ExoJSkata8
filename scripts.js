@@ -460,9 +460,17 @@ console.log(tabex20(valeurTabex20b))
 
 // CODE ICI
 
+function tabex21 (string1, string2) {
+const tab21String1 = string1.split("").sort().join("");
+const tab21String2 = string2.split("").sort().join("");
 
-
-
+if (tab21String1 === tab21String2) {
+return true
+} else {
+return false
+}
+}
+console.log(tabex21("listen", "silent"))
 
 
 
@@ -502,8 +510,16 @@ console.log(tabex20(valeurTabex20b))
 
 // CODE ICI
 
-
-
+function tabex22 (string) {
+const tabex22String1 = string.split("");
+for (let i = 0; i < tabex22String1.length; i++){
+    if (tabex22String1[i] === tabex22String1[i+1]) {
+        tabex22String1.splice(i,1);
+    }
+}
+return tabex22String1.join("")
+}
+console.log(tabex22("teester"))
 
 
 
@@ -547,7 +563,15 @@ console.log(tabex20(valeurTabex20b))
 
 // CODE ICI
 
+function tabex23 (number) {
+    const tab23Part1 = number.slice(0,3);
+    const tab23Part2 = number.slice(3,6);
+    const tab23Part3 = number.slice(6,10);
 
+    return `(${tab23Part1.join("")}) ${tab23Part2.join("")}-${tab23Part3.join("")}`
+
+}
+console.log(tabex23([1,2,3,4,5,6,7,8,9,0]))
 
 
 
@@ -584,8 +608,17 @@ console.log(tabex20(valeurTabex20b))
 
 // CODE ICI
 
-
-
+function findMissingLetter (valeur) {
+    const finder = valeur.map((e) => {
+        return e.charCodeAt()
+    });
+    for (let i=0; i<finder.length; i++) {
+        if (finder[i] !== finder[i+1]-1) {
+            return String.fromCharCode(finder[i]+1)
+        }
+    }
+}
+console.log(findMissingLetter(["a","b","c","d","f"]))
 
 
 
@@ -623,8 +656,20 @@ console.log(tabex20(valeurTabex20b))
 
 // CODE ICI
 
-
-
+function tabex25 (e) {
+const triage = e.sort((a, b) => {
+    if (a.toLowerCase() < b.toLowerCase()) {
+        return -1
+    }
+    if (a.toLowerCase() > b.toLowerCase()) {
+        return 1
+    }
+    else 
+    return 0
+});
+return triage;
+}
+console.log(tabex25(["Banana", "Orange", "Apple", "Mango","lait", "beurre", "fromage", "yaourt"]))
 
 
 
@@ -662,7 +707,11 @@ console.log(tabex20(valeurTabex20b))
 // otherAngle(60, 60) // 60
 // Indice : Pour trouver le troisième angle, tu dois soustraire la somme des deux angles donnés à 180 degrés.
 
-// CODE ICI
+function tabex26 (x,y) {
+    const AngleTab26 = 180 - (x+y);
+    return AngleTab26
+}
+console.log(tabex26(60,60))
 
 //----------------------------------------------------------------------------------------------//
 
@@ -675,6 +724,17 @@ console.log(tabex20(valeurTabex20b))
 // Indice : Pour savoir ça tu peux utiliser le modulo. Si une année est divisible par 4 et que le reste de la division est égal à 0, alors c'est une année bissextile.
 
 // CODE ICI
+
+function tabex27 (x) {
+if (x % 4 === 0) {
+    return (true)
+} else {
+    return (false)
+}
+}
+console.log(tabex27(2021))
+
+
 
 //----------------------------------------------------------------------------------------------//
 
@@ -700,9 +760,36 @@ console.log(tabex20(valeurTabex20b))
 
 // CODE ICI
 
+const animals = [
+      { name: "Panda", type: "Wild" },
+      { name: "Cat", type: "Domestic" },
+      { name: "Turtle", type: "Domestic" },
+      { name: "Dog", type: "Domestic" },
+      { name: "Crocodile", type: "Wild" },
+      { name: "Eagle", type: "Wild" },
+      { name: "Donkey", type: "Domestic" },
+      { name: "Pigeon", type: "Domestic" },
+      { name: "Monkey", type: "Wild" }
+    ]
 
-
-
+    function tabex28 (x) {
+        let tabDomestic = [];
+        let tabWild = [];
+        let tabFinal = [];
+        for (let i=0; i<animals.length; i++) {
+            if (animals[i].type === "Domestic") {
+                tabDomestic.push(animals[i].name)
+            } else {
+                tabWild.push(animals[i].name)
+            }
+        }
+        tabDomestic.sort()
+        tabWild.sort().reverse()
+        tabFinal.push(tabDomestic)
+        tabFinal.push(tabWild)
+        return tabFinal        
+    }
+console.log(tabex28(animals))
 
 //-----------------------------------------------SOLUTIONS-----------------------------------------------//
 
@@ -752,7 +839,18 @@ console.log(tabex20(valeurTabex20b))
 
 // CODE ICI
 
-
+// function tabex29 () {
+//     let siege = []
+//     for (i=1; i <= 26; i++) {
+//         let colonne = []
+//         for (j=1; j <= 100; j++) {
+//             colonne.push(`${i}-${j}`)
+//         }
+//         siege.push(colonne)
+//     }
+//     return siege
+// }
+// console.log(tabex29())
 
 
 
@@ -806,8 +904,21 @@ Pour exemple, si ta fonction recevait le tableau ci-dessous en paramètre, tu de
 
 // CODE ICI
 
+const valeurTabex30=["1:0", "2:0", "3:0", "4:4", "2:2", "3:3", "1:4", "2:3", "2:4", "3:3"]
 
-
+function tabex30 (x) {
+    let score = 0
+    for (i=0; i<x.length ; i++) {
+        if (x[i][0] > x[i][2] ) {
+            score = score + 3
+        }
+        else if (x[i][0] === x[i][2] ) {
+            score = score + 1
+        } 
+    }
+    return score
+}
+console.log(tabex30(valeurTabex30))
 
 
 
